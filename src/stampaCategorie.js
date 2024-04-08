@@ -46,15 +46,22 @@ function stampaCategorie() {
             elementiCategorie[indice].forEach((nomeElemento,iElemento) => {
 
                 let liElemento = document.createElement("li");
-                liElemento.innerHTML = nomeElemento;
+                
                 let checkBox = document.createElement("input");
                 checkBox.type = 'checkbox';
                 checkBox.name = iElemento;
                 checkboxName = iElemento;
                 checkBox.id = nomeCategoria + "_" + iElemento;
 
+                
+                let label = document.createElement("label");
+                label.htmlFor = checkBox.id;
+                console.log(label);
+                label.innerHTML = nomeElemento;
+
                 ulElementi.append(liElemento);
                 liElemento.prepend(checkBox);
+                liElemento.append(label);
 
             });
         }
@@ -63,10 +70,11 @@ function stampaCategorie() {
          }
 
          /* ------- BOTTONE ELIMINA ------- */
-         let rimuoviDallaLista = document.createElement("button");
-         rimuoviDallaLista.innerHTML = 'Rimuovi dalla lista';
-         rimuoviDallaLista.id = "elimina_da_" + nomeCategoria;
-         rimuoviDallaLista.onclick = function () { eliminaElementoDallaCategoria(indice) };
-         divCategoria.appendChild(rimuoviDallaLista);
+        let rimuoviDallaLista = document.createElement("button");
+        rimuoviDallaLista.innerHTML = 'Rimuovi dalla lista';
+        rimuoviDallaLista.id = "elimina_da_" + nomeCategoria;
+        rimuoviDallaLista.onclick = function () { eliminaElementoDallaCategoria(indice) };
+        divCategoria.appendChild(rimuoviDallaLista);
+        
     })
 }

@@ -8,8 +8,8 @@ function aggiungiCategoria() {
 }
 
 function aggElementoAllaCategoria(indice,inputID) {
-    console.log(inputID);
-    console.log(indice);
+    //console.log(inputID);
+    //console.log(indice);
     let nomeNuovoElemento = document.getElementById(inputID).value;
     if (nomeNuovoElemento != '') {
         elementiCategorie[indice].push(nomeNuovoElemento);
@@ -19,11 +19,8 @@ function aggElementoAllaCategoria(indice,inputID) {
 
 function eliminaElementoDallaCategoria(indice) {
 
-
     let elementiDaCancellare = document.querySelectorAll("li input:checked");
-    //let arrayElementiDaCancellare = [...elementiDaCancellare];
-
-    console.log(elementiDaCancellare);
+    //console.log(elementiDaCancellare);
     
 
     elementiDaCancellare.forEach((elementoDaCancellare) => {
@@ -34,3 +31,12 @@ function eliminaElementoDallaCategoria(indice) {
     });
     stampaCategorie();
 }
+
+/* let checkbox = document.getElementById();
+
+console.log(checkbox);
+//checkbox.addEventListener('click', function () {
+    console.log(checkbox);
+    // if (checkbox.checked == 'true' ){}
+    checkbox.parentElement.classList.toggle("done");
+//}); */

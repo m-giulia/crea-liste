@@ -64,3 +64,13 @@ button {
 #container > div ul li input[type=checkbox] {
     margin-right: 1rem;
 }
+label[for] {
+    cursor: pointer;
+
+}
+#container > div ul li [type=checkbox]:checked + label{
+    text-decoration: line-through; 
+  }
+.done {
+    text-decoration: line-through;
+}
