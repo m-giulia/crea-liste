@@ -55,3 +55,12 @@ button {
     text-transform: uppercase;
     cursor: pointer;
 }
+
+#container > div ul {
+    list-style: none;
+    padding-inline: 0;
+}
+
+#container > div ul li input[type=checkbox] {
+    margin-right: 1rem;
+}
